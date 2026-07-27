@@ -48,7 +48,7 @@ jobs:
       
       - name: Get all markdown files (excluding tools)
         id: all-md
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v47
         with:
           files: |
             **/*.md
@@ -57,7 +57,7 @@ jobs:
       
       - name: Get docs markdown files
         id: docs-md
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v47
         with:
           files: |
             docs/**/*.md
@@ -66,13 +66,13 @@ jobs:
       
       - name: Get tools files
         id: tools
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v47
         with:
           files: tools/**
       
       - name: Get files outside allowed directories
         id: outside-allowed
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v47
         with:
           files: |
             !docs/**
@@ -177,14 +177,14 @@ jobs:
       
       # MarkdownLint
       - name: Run markdownLint
-        uses: DavidAnson/markdownlint-cli2-action@v21
+        uses: DavidAnson/markdownlint-cli2-action@v24
         with:
           globs: ${{ needs.discover-changes.outputs.all_md_files }}
           config: .github/config/.markdownlint.jsonc
           separator: ','
 
       - name: Run Vale
-        uses: errata-ai/vale-action@v2.1.1
+        uses: errata-ai/vale-action@v2.1.2
         with:
           version: '3.12.0'
           files: ${{ needs.discover-changes.outputs.all_md_files }}
@@ -435,7 +435,7 @@ jobs:
       
       - name: Upload json-server logs
         if: always() && steps.check-testable.outputs.has_testable == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: json-server-logs
           path: json-server.log

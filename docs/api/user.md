@@ -57,6 +57,8 @@ Example `user` resource
 }
 ```
 
+Updated text to test.
+
 | Property name | Type | Description |
 | ------------- | ----------- | ----------- |
 | `lastName` | string | The user's last name |

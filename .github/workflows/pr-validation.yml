@@ -42,7 +42,7 @@ jobs:
       
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       
@@ -97,10 +97,10 @@ jobs:
     if: needs.discover-changes.outputs.any_tools_changed == 'true'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       
@@ -138,10 +138,10 @@ jobs:
       CHANGED_FILES: ${{ needs.discover-changes.outputs.all_md_files }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       
@@ -215,15 +215,15 @@ jobs:
       needs.discover-changes.outputs.any_docs_changed == 'true'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: '18'
       
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       
@@ -467,14 +467,14 @@ jobs:
       (needs.test-api-docs.result == 'success' || needs.test-api-docs.result == 'skipped')
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       
       # Check unauthorized file changes
       - name: Check unauthorized file changes
         if: needs.discover-changes.outputs.any_unauthorized == 'true'
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           script: |
             const author = context.payload.pull_request.user.login;

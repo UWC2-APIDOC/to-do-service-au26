@@ -32,6 +32,7 @@ No warranty of serviceability is expressed or implied.
         - Vale VSCode
         <!-- vale Vale.Spelling = YES -->
         <!-- vale Vale.Avoid = YES -->
+        - The Vale environment is already configured in this repo.
 3. Read the complete contributor guide:
     - [Documentation requirements](https://uwc2-apidoc.github.io/to-do-service-au26/contributors-guide/documentation-requirements/)
     - [Writers guide](https://uwc2-apidoc.github.io/to-do-service-au26/contributors-guide/writers-guide/)
@@ -44,7 +45,9 @@ No warranty of serviceability is expressed or implied.
 - Code examples
 - Bug fixes to existing docs
 
-**Assignment work** Students should place assignment files in `/assignments`
+**Assignment work**:
+
+- Students should place assignment files in `/assignments` or `/docs`, as directed by the assignment.
 
 ### 👨‍🏫 Instructors
 

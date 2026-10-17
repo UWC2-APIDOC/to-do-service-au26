@@ -282,6 +282,25 @@ for reviewers to understand your changes.
 
 **Fix** Only make changes to files in the allowed directories
 
+**Note** If you are running the json-server and using the `api/to-do-db-source.json`
+as your database, this can make changes to the local file in the clone of your fork.
+
+To prevent these changes from becoming part of your pull request,
+before you commit your changes to a feature branch, run the following command
+in a terminal window opened from GitHub Desktop
+(which should be the root directory of the repo).
+
+``` bash
+git restore --source=main api/to-do-db-source.json
+```
+
+This restores the file to it's original state and prevents any local changes made during
+use from finding their way into your feature branch.
+
+As a general practice, always confirm your list of changed files before you commit them to your
+feature branch. If a changed `.json` file becomes part of your feature branch, this
+command can help restore it.
+
 ---
 
 ## Where to see results

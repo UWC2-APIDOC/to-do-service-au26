@@ -103,9 +103,10 @@ Check off each task as you learn Markdown.
 For more information, visit the
 [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github).
 
-* used ChatGPT to create table and organizing the info 
-
 ---
 
 **Tip:** Practice Markdown in GitHub Issues or
 README.md files to become familiar with its syntax.
+
+* used ChatGPT to create table and organizing the info 
+

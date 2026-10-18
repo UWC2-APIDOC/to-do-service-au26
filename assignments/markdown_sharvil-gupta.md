@@ -20,7 +20,7 @@ GFM (GitHub Flavored Markdown) has additional features that
 some Markdown implementations don't have, such as tables and
 task lists. Markdown (GFM) can be a little complex to learn
 if you're not familiar with markup languages used to insert
-links, formatting, and tables
+links, formatting, and tables.
 
 ## Common Markdown Notation
 
@@ -97,20 +97,20 @@ greet("GitHub")
 
 Check off each task as you learn Markdown.
 
-- [ ] Create a heading using `#`
-- [ ] Create a subheading using `##`
-- [ ] Write **bold text**
-- [ ] Write *italic text*
-- [ ] Create a bullet list
-- [ ] Create a numbered list
-- [ ] Insert a hyperlink
-- [ ] Create a Markdown table
-- [ ] Insert an inline code example
-- [ ] Create a fenced code block
-- [ ] Add a blockquote
-- [ ] Add a horizontal divider
-- [ ] Preview the README.md file
-- [ ] Commit the Markdown file to GitHub
+- [X] Create a heading using `#`
+- [X] Create a subheading using `##`
+- [X] Write **bold text**
+- [X] Write *italic text*
+- [X] Create a bullet list
+- [X] Create a numbered list
+- [X] Insert a hyperlink
+- [X] Create a Markdown table
+- [X] Insert an inline code example
+- [X] Create a fenced code block
+- [X] Add a blockquote
+- [X] Add a horizontal divider
+- [X] Preview the README.md file
+- [X] Commit the Markdown file to GitHub
 
 ## Additional Resources
 
@@ -121,6 +121,13 @@ For more information, visit the
 
 **Tip:** Practice Markdown in GitHub Issues or README.md files
 to become familiar with its syntax.
+
+**AI Disclosure:** I used ChatGPT to help create the table,
+organize the information, and correct Markdown formatting.
+**Tip:** Practice Markdown in GitHub Issues or
+README.md files to become familiar with its syntax.
+
+** used ChatGPT to create table and organizing the info 
 
 **AI Disclosure:** I used ChatGPT to help create the table,
 organize the information, and correct Markdown formatting.

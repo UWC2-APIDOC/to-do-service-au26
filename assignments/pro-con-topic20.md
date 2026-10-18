@@ -108,5 +108,5 @@ For more information, visit the
 **Tip:** Practice Markdown in GitHub Issues or
 README.md files to become familiar with its syntax.
 
-** used ChatGPT to create table and organizing the info 
+*** used ChatGPT to create table and organizing the info 
 

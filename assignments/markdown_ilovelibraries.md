@@ -14,4 +14,4 @@
 
 ## Advice for getting started using Markdown
 
-* Use cheat sheets online, such as [this Markdown Cheatsheet on GitHub](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers).
+* Use this [cheat sheet in GitHub](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).

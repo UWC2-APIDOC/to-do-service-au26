@@ -23,15 +23,18 @@ topic_type: reference
 
 **Author:** `Rebecca Simms`
 
-Retrieves user information with their id and creates new users.
+Retrieves user information with id and creates new users.
 
 ## curl examples
 
-This section shows examples of using curl in a command line interface to GET and POST user data. Replace {server_url} with the URL configured on your system.
+This section shows examples of using curl in a command line interface
+to GET and POST user data. Replace {server_url}
+with the URL configured on your system.
 
 ### `GET` example (curl)
 
-This GET example request retrieves user data for the user with the unique identifier 3.
+This GET example request retrieves user data
+for the user with the unique identifier 3.
 
 #### `GET` example request (curl)
 
@@ -52,7 +55,8 @@ curl http://{server_url}/users/3
 
 ### `POST` example (curl)
 
-This POST example updates the user database by creating the entry for user Jane Doe.
+This POST example updates the user database
+by creating the entry for user Jane Doe.
 
 #### `POST` example request (curl)
 
@@ -79,7 +83,8 @@ curl -X POST http://{server_url}/users \
 
 ## Postman examples
 
-This section shows examples of using Postman to GET and POST user data. Replace {base_url} with the URL configured on your system.
+This section shows examples of using Postman to GET and POST user data.
+Replace {base_url} with the URL configured on your system.
 
 ### `GET` example (Postman)
 

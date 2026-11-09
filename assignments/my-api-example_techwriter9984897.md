@@ -79,5 +79,3 @@ curl -X POST http://{server_url}/library \
       "id": 2
   }'
 ```
-
-

@@ -1,7 +1,6 @@
 ---
 # markdownlint-disable
 # vale off
-
 layout: default
 description: <REPLACE with description of this API endpoint>
 topic_type: reference

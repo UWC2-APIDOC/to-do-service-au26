@@ -185,7 +185,7 @@ Expected status: **201 Created**. If no new items were added before this request
 
 **Important:** Each `POST` creates another record. If you run the curl `POST` example first and then the Postman `POST` example, the second response typically receives a different ID. The examples show expected behavior based on the supplied database; they were not captured from an actual running VS Code server.
 
-## Verify the new item
+## Verify the new item.
 
 After a successful `POST`, retrieve the entire seafood collection to see the new record:
 

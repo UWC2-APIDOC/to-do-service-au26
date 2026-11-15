@@ -1,0 +1,2 @@
+// .markdownlint.jsonc
+{ "extends": ".github/config/.markdownlint.jsonc" }

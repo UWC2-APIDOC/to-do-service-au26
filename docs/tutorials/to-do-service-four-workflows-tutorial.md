@@ -231,4 +231,4 @@ You can now use three API endpoints to complete four first-use workflows:
 - [Get a user by ID API reference](../api/users-get-user-by-id.md)
 - [Task resource](../api/task.md)
 
-> **Note:** This tutorial uses the local `json-server` sample API, which writes to the local JSON database. Its behavior is for learning and testing; do not treat it as production authentication or user enrollment.
+> **Note:** This tutorial uses the local `json-server` sample API, which writes to the local JSON database. Its behavior is for learning and testing; do not treat it as production authentication or user enrollment

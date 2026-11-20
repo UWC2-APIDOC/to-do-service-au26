@@ -22,7 +22,9 @@ topic_type: reference
 
 **Author:** `Sharvil Gupta`
 
-The Seafood Restaurant Inventory API manages a list of seafood products available at a restaurant. Each item has an ID, name, price, source location, meat type, quality description, and expiration date. The `/seafood` resource supports retrieving existing items with `GET` and creating new items with `POST`.
+The Seafood Restaurant Inventory API manages seafood products available at a restaurant.
+Each item has an ID, name, price, source location, meat type, quality, and use-by date.
+The `/seafood` resource supports retrieving items with `GET` and creating items with `POST`.
 
 ## Start the local API server
 
@@ -32,15 +34,24 @@ In the VS Code terminal, navigate to the directory containing `food-db.json` and
 npx json-server@0.17.4 --watch food-db.json --port 3000
 ```
 
-Keep this terminal running while testing the API. The base server URL is `http://localhost:3000`. Requests fail if the server is not running, and the examples assume the uploaded `food-db.json` is the database being served.
+Keep this terminal running while testing the API.
+The base server URL is `http://localhost:3000`.
+Requests fail if the server does not run.
+The examples assume that the uploaded `food-db.json` serves as the database.
 
 ## curl examples
 
-These examples use curl to communicate with the local JSON Server API. The base URL `http://localhost:3000` refers to a server running on your own computer; `/seafood` is the resource path. Some templates write this base URL as `{server_url}`. Replace that placeholder with `localhost:3000` when making an actual request.
+These examples use curl to communicate with the local JSON Server API.
+The base URL `http://localhost:3000` refers to a server running on your computer.
+The `/seafood` path is the resource path.
+Some templates write the base URL as `{server_url}`.
+Replace that placeholder with `localhost:3000` when making an actual request.
 
 ### `GET` example (curl)
 
-The `GET` request retrieves the seafood item whose ID is `1` from `/seafood/1`. When the item exists, the server returns `200 OK` with a JSON object. A `GET` request does not modify the database.
+The `GET` request retrieves the seafood item whose ID is `1` from `/seafood/1`.
+When the item exists, the server returns `200 OK` with a JSON object.
+A `GET` request doesn't change the database.
 
 #### `GET` example request (curl)
 
@@ -66,7 +77,10 @@ Expected HTTP status: **200 OK**. Expected response body:
 
 ### `POST` example (curl)
 
-The `POST` request creates a new seafood entry in the `/seafood` resource. It sends the item attributes in a JSON request body; JSON Server assigns the new entry an ID. The example adds a Branzino item.
+The `POST` request creates a new seafood entry in the `/seafood` resource.
+It sends the item attributes in a JSON request body.
+JSON Server assigns the new entry an ID.
+The example adds a Branzino item.
 
 #### `POST` example request (curl)
 
@@ -85,7 +99,9 @@ curl -i -X POST http://localhost:3000/seafood \
 
 #### `POST` example response (curl)
 
-Expected HTTP status: **201 Created**. If the database still contains exactly the original 15 items and IDs 1–15, a typical response body is:
+Expected HTTP status: **201 Created**.
+If the database still contains exactly the original 15 items and IDs 1–15,
+a typical response body is:
 
 ```json
 {
@@ -99,15 +115,20 @@ Expected HTTP status: **201 Created**. If the database still contains exactly th
 }
 ```
 
-The ID shown is illustrative, not a response captured from a running server. The actual assigned ID may differ, especially after other `POST` requests.
+The ID shown is illustrative, not a response captured from a running server.
+The actual assigned ID may differ, especially after other `POST` requests.
 
 ## Postman examples
 
-These examples use Postman to send a `GET` request and a `POST` request to the same local Seafood Restaurant Inventory API. Enter the URL in Postman's request URL field, choose the specified HTTP method, and click **Send**. The expected status codes are `200 OK` for retrieval and `201 Created` for creation.
+These examples use Postman to send a `GET` request and a `POST` request to the same
+local Seafood Restaurant Inventory API. Enter the URL in Postman's request URL field,
+choose the specified HTTP method, and click **Send**. The expected status codes are
+`200 OK` for retrieval and `201 Created` for creation.
 
 ### `GET` example (Postman)
 
-The `GET` request looks up the existing Atlantic Salmon entry by its ID (`1`). It returns item information without changing the source database.
+The `GET` request looks up the existing Atlantic Salmon entry by its ID (`1`).
+It returns item information without changing the source database.
 
 #### `GET` example request (Postman)
 
@@ -134,7 +155,9 @@ Expected status: **200 OK**. Under **Body → Pretty → JSON**, the expected re
 
 ### `POST` example (Postman)
 
-The `POST` request creates a new Branzino seafood entry. Select `POST`, use the `/seafood` collection URL, configure the JSON content type, and submit the request body.
+The `POST` request creates a new Branzino seafood entry. Select `POST`, use the
+`/seafood` collection URL, configure the JSON media type, and submit the request
+body.
 
 #### `POST` example request (Postman)
 
@@ -150,7 +173,8 @@ Under the **Headers** tab, add this request header:
 | --- | --- |
 | `Content-Type` | `application/json` |
 
-This is a *request* header. Server-generated *response* headers such as `Date`, `ETag`, and `Content-Length` are not known in advance and depend on the actual response.
+This is a _request_ header. Server-generated _response_ headers such as `Date`, `ETag`,
+and `Content-Length` aren't known in advance because they depend on the actual response.
 
 ##### `POST` request data (Postman)
 
@@ -169,7 +193,8 @@ Select **Body → raw → JSON** and paste:
 
 #### `POST` example response (Postman)
 
-Expected status: **201 Created**. If no new items were added before this request, an illustrative response body is:
+Expected status: **201 Created**. If no new items were added before this request, an
+illustrative response body is:
 
 ```json
 {
@@ -183,9 +208,12 @@ Expected status: **201 Created**. If no new items were added before this request
 }
 ```
 
-**Important:** Each `POST` creates another record. If you run the curl `POST` example first and then the Postman `POST` example, the second response typically receives a different ID. The examples show expected behavior based on the supplied database; they were not captured from an actual running VS Code server.
+**Important:** Each `POST` creates another record. If you run the curl `POST` example first and
+then the Postman `POST` example, the second response typically receives a different ID. The
+examples show expected behavior based on the supplied database. They weren't captured from an
+actual running VS Code server.
 
-## Verify the new item.
+## Verify the new item
 
 After a successful `POST`, retrieve the entire seafood collection to see the new record:
 
@@ -199,5 +227,5 @@ Or retrieve the new item using the ID returned in the `POST` response:
 curl http://localhost:3000/seafood/16
 ```
 
-Replace `16` with the actual returned ID if necessary. JSON Server generally saves created records back to `food-db.json`.
-gi
+Replace `16` with the actual returned ID if necessary. JSON Server generally saves created
+records back to `food-db.json`.
